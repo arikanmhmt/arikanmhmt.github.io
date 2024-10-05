@@ -1,0 +1,203 @@
+<html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Reklam Engelleme Yönetimi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6 md:p-8">
+                <h1 class="text-2xl md:text-3xl font-bold mb-6 text-center text-blue-600">Reklam Engelleme Yönetimi</h1>
+                
+                <!-- Dashboard -->
+                <div class="bg-blue-50 p-4 rounded-lg mb-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <h3 class="font-semibold text-blue-700">Toplam Kural</h3>
+                        <p id="totalRules" class="text-2xl font-bold text-blue-900">0</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-semibold text-green-700">İzin Verilenler</h3>
+                        <p id="allowedCount" class="text-2xl font-bold text-green-900">0</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-semibold text-red-700">Engellenenler</h3>
+                        <p id="blockedCount" class="text-2xl font-bold text-red-900">0</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-semibold text-purple-700">Yeniden Yazılanlar</h3>
+                        <p id="rewrittenCount" class="text-2xl font-bold text-purple-900">0</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="domainForm" class="mb-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label for="domainInput" class="block text-sm font-medium text-gray-700 mb-1">Domain</label>
+                            <input type="text" id="domainInput" placeholder="örn. example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="actionSelect" class="block text-sm font-medium text-gray-700 mb-1">İşlem</label>
+                            <select id="actionSelect" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">İşlem seçin</option>
+                                <option value="allow">İzin ver</option>
+                                <option value="block">Engelle</option>
+                                <option value="rewrite">Yeniden yaz</option>
+                                <option value="rewrite0">Yeniden yaz 0.0.0.0</option>
+                                <option value="redirect">Yönlendir</option>
+                            </select>
+                        </div>
+                        <div id="rewriteContainer" class="hidden">
+                            <label for="rewriteInput" class="block text-sm font-medium text-gray-700 mb-1">Yeniden Yazılacak Domain</label>
+                            <input type="text" id="rewriteInput" placeholder="örn. safe-example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div id="redirectContainer" class="hidden">
+                            <label for="redirectInput" class="block text-sm font-medium text-gray-700 mb-1">Yönlendirilecek URL</label>
+                            <input type="text" id="redirectInput" placeholder="örn. https://safe-example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">Kaydet</button>
+                    </div>
+                </form>
+
+                <!-- Rule List -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold mb-3 text-gray-700">Mevcut Kurallar</h2>
+                    <ul id="ruleList" class="space-y-2"></ul>
+                </div>
+
+                <!-- Export Button -->
+                <button id="exportBtn" class="w-full px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out">TXT olarak dışa aktar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let rules = JSON.parse(localStorage.getItem('rules')) || [];
+
+        function updateDashboard() {
+            document.getElementById('totalRules').textContent = rules.length;
+            document.getElementById('allowedCount').textContent = rules.filter(r => r.action === 'allow').length;
+            document.getElementById('blockedCount').textContent = rules.filter(r => r.action === 'block').length;
+            document.getElementById('rewrittenCount').textContent = rules.filter(r => r.action === 'rewrite' || r.action === 'rewrite0' || r.action === 'redirect').length;
+        }
+
+        function saveRules() {
+            localStorage.setItem('rules', JSON.stringify(rules));
+            updateDashboard();
+            renderRuleList();
+        }
+
+        function renderRuleList() {
+            const list = document.getElementById('ruleList');
+            list.innerHTML = '';
+            rules.forEach((rule, index) => {
+                const li = document.createElement('li');
+                li.className = 'bg-gray-50 p-3 rounded shadow-sm flex flex-col md:flex-row md:items-center md:justify-between';
+                li.innerHTML = `
+                    <span class="mb-2 md:mb-0">${formatRule(rule)}</span>
+                    <div>
+                        <button class="edit-btn text-blue-500 hover:text-blue-700 mr-2" data-index="${index}">Düzenle</button>
+                        <button class="delete-btn text-red-500 hover:text-red-700" data-index="${index}">Sil</button>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+        }
+
+        function formatRule(rule) {
+            switch(rule.action) {
+                case 'allow':
+                    return `<span class="text-green-600">İzin ver:</span> @@||${rule.domain}^$important`;
+                case 'block':
+                    return `<span class="text-red-600">Engelle:</span> ||${rule.domain}^$important`;
+                case 'rewrite':
+                    return `<span class="text-purple-600">Yeniden yaz:</span> ||${rule.domain}^$dnsrewrite=${rule.rewrite}`;
+                case 'rewrite0':
+                    return `<span class="text-purple-600">Yeniden yaz 0.0.0.0:</span> ||${rule.domain}^$dnsrewrite=0.0.0.0`;
+                case 'redirect':
+                    return `<span class="text-blue-600">Yönlendir:</span> ||${rule.domain}^$redirect=${rule.redirect}`;
+                default:
+                    return rule.domain;
+            }
+        }
+
+        document.getElementById('actionSelect').addEventListener('change', function(e) {
+            document.getElementById('rewriteContainer').style.display = e.target.value === 'rewrite' ? 'block' : 'none';
+            document.getElementById('redirectContainer').style.display = e.target.value === 'redirect' ? 'block' : 'none';
+        });
+
+        document.getElementById('domainForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const domain = document.getElementById('domainInput').value.trim().toLowerCase();
+            const action = document.getElementById('actionSelect').value;
+            const rewrite = document.getElementById('rewriteInput').value.trim();
+            const redirect = document.getElementById('redirectInput').value.trim();
+
+            if (domain && action) {
+                const rule = { domain, action };
+                if (action === 'rewrite') rule.rewrite = rewrite;
+                if (action === 'redirect') rule.redirect = redirect;
+
+                const index = rules.findIndex(r => r.domain === domain);
+                if (index !== -1) {
+                    rules[index] = rule;
+                } else {
+                    rules.push(rule);
+                }
+                saveRules();
+                document.getElementById('domainForm').reset();
+                document.getElementById('rewriteContainer').style.display = 'none';
+                document.getElementById('redirectContainer').style.display = 'none';
+            }
+        });
+
+        document.getElementById('ruleList').addEventListener('click', function(e) {
+            const index = e.target.dataset.index;
+            if (e.target.classList.contains('edit-btn')) {
+                const rule = rules[index];
+                document.getElementById('domainInput').value = rule.domain;
+                document.getElementById('actionSelect').value = rule.action;
+                document.getElementById('rewriteInput').value = rule.rewrite || '';
+                document.getElementById('redirectInput').value = rule.redirect || '';
+                document.getElementById('rewriteContainer').style.display = rule.action === 'rewrite' ? 'block' : 'none';
+                document.getElementById('redirectContainer').style.display = rule.action === 'redirect' ? 'block' : 'none';
+            } else if (e.target.classList.contains('delete-btn')) {
+                if (confirm('Bu kuralı silmek istediğinizden emin misiniz?')) {
+                    rules.splice(index, 1);
+                    saveRules();
+                }
+            }
+        });
+
+        document.getElementById('exportBtn').addEventListener('click', function() {
+            const header = `[Adblock Plus 2.0]
+! Title: Özel Reklam Engelleme Listesi
+! Last modified: ${new Date().toISOString()}
+! Expires: 1 days (güncelleme sıklığı)
+! Homepage: https://www.example.com/
+! License: https://creativecommons.org/licenses/by-sa/4.0/
+
+! Description: Bu liste, özel olarak oluşturulmuş reklam engelleme kurallarını içerir.
+
+! *** Özel kurallar başlangıcı ***
+`;
+
+            const formattedRules = rules.map(rule => formatRule(rule).replace(/<[^>]*>/g, ''));
+            const content = header + formattedRules.join('\n');
+            const blob = new Blob([content], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'adblock_kurallari.txt';
+            a.click();
+        });
+
+        // Initial render
+        updateDashboard();
+        renderRuleList();
+    </script>
+</body>
+</html>

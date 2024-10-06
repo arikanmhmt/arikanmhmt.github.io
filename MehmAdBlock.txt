@@ -5,6 +5,13 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+@@||d1tru86qrby720.cloudfront.net^$important
+||*.hornet-live.com^$important
+||2-01-5a96-0002.cdx.cedexis.net^$important
+||ep2.facebook.com^$important
+||google.com^$important
+||star.c10r.facebook.com^$important
+@@||mashhur1.blogspot.com^$important
 @@||0i0i0i0.com^$important
 @@||c.vkcache.net^$important
 @@||deliver.vkcdnservice.com^$important

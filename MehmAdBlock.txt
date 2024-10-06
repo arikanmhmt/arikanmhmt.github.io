@@ -5,6 +5,8 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+||dgw.c10r.facebook.com^$important
+@@||static-ah.xhcdn.com^$important
 @@||d1tru86qrby720.cloudfront.net^$important
 ||*.hornet-live.com^$important
 ||2-01-5a96-0002.cdx.cedexis.net^$important

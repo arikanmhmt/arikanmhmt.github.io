@@ -5,6 +5,12 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+||thumb.live.mmcdn.com^$important
+||mascfeet.com^$important
+||chaturbate.com^$important
+@@||firebaselogging-pa.googleapis.com^$important
+@@||video-b.xhcdn.com^$important
+||xhstorage.com^$important
 @@||static-nss.xhcdn.com^$important
 @@||0i0i0i0.com^$important
 @@||c.vkcache.net^$important

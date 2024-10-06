@@ -5,6 +5,7 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+@@||static-nss.xhcdn.com^$important
 @@||0i0i0i0.com^$important
 @@||c.vkcache.net^$important
 @@||d1tru86qrby720.cloudfront.net^$important

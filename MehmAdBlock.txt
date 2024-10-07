@@ -1,24 +1,19 @@
 [Adblock Plus 2.0]
 ! Version:
-! Title: MehmAdBlock
+! Title: M-AdBlock
 ! Last modified:
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
-||thumb.live.mmcdn.com^$important
-||mascfeet.com^$important
-||chaturbate.com^$important
-@@||firebaselogging-pa.googleapis.com^$important
-@@||video-b.xhcdn.com^$important
-||xhstorage.com^$important
-@@||static-nss.xhcdn.com^$important
 @@||0i0i0i0.com^$important
+@@||515013314.collect.igodigital.com^$important
 @@||c.vkcache.net^$important
 @@||d1tru86qrby720.cloudfront.net^$important
 @@||deliver.vkcdnservice.com^$important
 @@||dooood.com^$important
 @@||drive.google.com^$important
 @@||drive.usercontent.google.com^$important
+@@||firebaselogging-pa.googleapis.com^$important
 @@||gateway.instagram.com^$important
 @@||i-fallback.instagram.com^$important
 @@||i.doodcdn.co^$important
@@ -28,23 +23,26 @@
 @@||img.doodcdn.co^$important
 @@||instagram.fist6-3.fna.fbcdn.net^$important
 @@||mashhur1.blogspot.com^$important
+@@||mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com^$important
 @@||scontent-fallback.cdninstagram.com^$important
 @@||scontent.cdninstagram.com^$important
 @@||slink.ltd^$important
 @@||static-ah.xhcdn.com^$important
 @@||static-cdn.strpst.com^$important
+@@||static-nss.xhcdn.com^$important
 @@||static.doodcdn.co^$important
 @@||t.co^$important
 @@||thumb-nss.xhcdn.com^$important
 @@||tr.xhamster.com^$important
+@@||video-b.xhcdn.com^$important
 @@||wl.spotify.com^$important
 ||*.hornet-live.com^$important
 ||*.leaktest.dnsoverride.com^$important
 ||*.xhcdn.com^$important
 ||2-01-5a96-0002.cdx.cedexis.net^$important
-||515013314.collect.igodigital.com^$important
 ||8.8.4.4^$important
 ||8.8.8.8^$important
+||515013314.collect.igodigital.com^$important
 ||a.exosrv.com^$important
 ||a.opoxv.com^$important
 ||a.orbsrv.com^$important
@@ -74,6 +72,7 @@
 ||ccdn.mobildev.in^$important
 ||cdn.wolf-327b.com^$important
 ||chat-e2ee-ig-p42.c10r.facebook.com^$important
+||chaturbate.com^$important
 ||chromewebstore.google.com^$important
 ||clients.l.google.com^$important
 ||clients3.google.com^$important
@@ -88,7 +87,9 @@
 ||countly.vakifbank.com.tr^$important
 ||customerevents.netflix.com^$important
 ||d13k7prax1yi04.cloudfront.net^$important
+||dft9.online^$important
 ||dgw.c10r.facebook.com^$important
+||direct.xhrecipes.xyz^$important
 ||dit.whatsapp.net^$important
 ||dns.google.com^$important
 ||dns.google^$important
@@ -129,8 +130,8 @@
 ||lf8q.online^$important
 ||machotube.tv^$third-party
 ||manporn.xxx^$third-party
+||mascfeet.com^$important
 ||mc2tnzs73p3554cjc7h876m-gfm4.device.marketingcloudapis.com^$important
-||mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com^$important
 ||media.trafficjunky.net^$important
 ||metricswpsh.com^$important
 ||mobile.events.data.microsoft.com^$important
@@ -170,12 +171,14 @@
 ||storage.multstorage.com^$important
 ||stun.l.google.com^$important
 ||thegay.com^$third-party
+||thumb.live.mmcdn.com^$important
 ||time1.google.com^$important
 ||time2.google.com^$important
 ||time3.google.com^$important
 ||time4.google.com^$important
 ||tpc.googlesyndication.com^$important
 ||tr.xhamster.com^$third-party
+||tr.xhrecipes.xyz^$important
 ||ublock.telemetry.eyeo.com^$important
 ||unpkg.com^$important
 ||upload.fp.measure.office.com^$important
@@ -200,5 +203,7 @@
 ||xh-shared^$important
 ||xhamster.com^$important
 ||xhamster.desi^$important
+||xhrecipes.xyz^$important
+||xhstorage.com^$important
 ||z-p42-chat-e2ee-ig-fallback.facebook.com^$important
 ||z-p42-chat-e2ee-ig.facebook.com^$important

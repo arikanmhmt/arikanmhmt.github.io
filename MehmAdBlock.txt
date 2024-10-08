@@ -44,205 +44,113 @@ tr.xhamster.com##.fixed-height.xnE-MTmNpremium-n-overlay
 tr.xhamster.com##.xnE-MTmNno-ts-init.xnE-MTmN--middle.xnE-MTmN
 tr.xhamster.com##.xnE-MTmNno-ts-init.xnE-MTmN--bottom.xnE-MTmN
 tr.xhamster.com##.xnE-MTmNpremium-n-overlay
-@@||0i0i0i0.com^$important
-@@||515013314.collect.igodigital.com^$important
-@@||c.vkcache.net^$important
-@@||d1tru86qrby720.cloudfront.net^$important
-@@||deliver.vkcdnservice.com^$important
-@@||dooood.com^$important
-@@||drive.google.com^$important
-@@||drive.usercontent.google.com^$important
-@@||firebaselogging-pa.googleapis.com^$important
-@@||gateway.instagram.com^$important
-@@||i-fallback.instagram.com^$important
-@@||i.doodcdn.co^$important
-@@||i.doodcdn.com^$important
-@@||i.instagram.com^$important
-@@||ic-vt-nss.xhcdn.com^$important
-@@||img.doodcdn.co^$important
-@@||instagram.fist6-3.fna.fbcdn.net^$important
-@@||mashhur1.blogspot.com^$important
-@@||mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com^$important
-@@||scontent-fallback.cdninstagram.com^$important
-@@||scontent.cdninstagram.com^$important
-@@||slink.ltd^$important
-@@||static-ah.xhcdn.com^$important
-@@||static-cdn.strpst.com^$important
-@@||static-nss.xhcdn.com^$important
-@@||static.doodcdn.co^$important
-@@||t.co^$important
-@@||thumb-nss.xhcdn.com^$important
-@@||tr.xhamster.com^$important
-@@||video-b.xhcdn.com^$important
-@@||wl.spotify.com^$important
-||*.hornet-live.com^$important
-||*.leaktest.dnsoverride.com^$important
-||*.xhcdn.com^$important
-||2-01-5a96-0002.cdx.cedexis.net^$important
-||8.8.4.4^$important
-||8.8.8.8^$important
-||515013314.collect.igodigital.com^$important
-||a.exosrv.com^$important
-||a.opoxv.com^$important
-||a.orbsrv.com^$important
-||accounts-cctld.l.google.com^$important
-||accounts.google.com.tr^$important
-||accounts.google.com^$important
-||ad.doubleclick.net^$important
-||ade.googlesyndication.com^$important
-||ads.exoclick.com^$important
-||amsterdam.xhamster.com^$important
-||anonymous-communication.ghostery.net^$important
-||api-leaktest.dnsoverride.com^$important
-||api.avo.app^$important
-||api.faphouse.com^$important
-||api.mixpanel.com^$important
-||api3.siftscience.com^$important
-||apis.google.com^$important
-||app-analytics-services.com^$important
-||app-measurement.com^$important
-||beacon.shazam.com^$important
-||blackbox.xhamster.com^$important
-||bnrs.esexa.online^$important
-||browser.events.data.microsoft.com^$important
-||browser.pipe.aria.microsoft.com^$important
-||btds.zog.link^$important
-||c.bing.com^$important
-||ccdn.mobildev.in^$important
-||cdn.wolf-327b.com^$important
-||chat-e2ee-ig-p42.c10r.facebook.com^$important
-||chaturbate.com^$important
-||chromewebstore.google.com^$important
-||clients.l.google.com^$important
-||clients3.google.com^$important
-||cnt.faphouse.com^$important
-||collector-pxljub4etb.perimeterx.net^$important
-||collector.github.com^$important
-||collector.xhamster.com^$important
-||config.fp.measure.office.com^$important
-||connect.facebook.net^$important
-||counter.yadro.ru^$important
-||countly.teb.com.tr^$important
-||countly.vakifbank.com.tr^$important
-||customerevents.netflix.com^$important
-||d13k7prax1yi04.cloudfront.net^$important
-||dft9.online^$important
-||dgw.c10r.facebook.com^$important
-||direct.xhrecipes.xyz^$important
-||dit.whatsapp.net^$important
-||dns.google.com^$important
-||dns.google^$important
-||edge-mqtt-fallback.facebook.com^$important
-||edge-mqtt.facebook.com^$important
-||emea.events.data.microsoft.com^$important
-||ep2.facebook.com^$important
-||etahub.com^$important
-||eu-mobile.events.data.microsoft.com^$important
-||eu-office.events.data.microsoft.com^$important
-||eu-teams.events.data.microsoft.com^$important
-||eu-west-3.xhamster.com^$important
-||events.cid.samba.tv^$important
-||events.mapbox.com^$important
-||exo.nel.measure.office.net^$important
-||faphouse.com^$important
-||firebaselogging-pa.googleapis.com^$important
-||fp.metricswpsh.com^$important
-||freepornvideos.xxx^$third-party
-||fxggxt.com^$third-party
-||gateway.facebook.com^$important
-||gayfuckporn.com^$third-party
-||gaymaletube.com^$third-party
-||gayvids.tube^$third-party
-||google.com^$important
-||googleads.g.doubleclick.net^$important
-||graph.facebook.com^$important
-||hqq.tv^$important
-||icegay.tv^$third-party
-||ichnaea.netflix.com^$important
-||iloptrex.com^$important
-||img.strpst.com^$important
-||improving.duckduckgo.com^$important
-||incoming.telemetry.mozilla.org^$important
-||ip.parrotdns.com^$important
-||js.wpadmngr.com^$important
-||lethimhit.com^$third-party
-||lf8q.online^$important
-||machotube.tv^$third-party
-||manporn.xxx^$third-party
-||mascfeet.com^$important
-||mc2tnzs73p3554cjc7h876m-gfm4.device.marketingcloudapis.com^$important
-||media.trafficjunky.net^$important
-||metricswpsh.com^$important
-||mobile.events.data.microsoft.com^$important
-||mobile.useinsider.com^$important
-||nereserv.com^$important
-||normandy.cdn.mozilla.net^$important
-||o516780.ingest.sentry.io^$important
-||officehub.nel.measure.office.net^$important
-||p.liadm.com^$important
-||pagead2.googlesyndication.com^$important
-||perseus-productanalytics.deliveryhero.net^$important
-||platform.cid.samba.tv^$important
-||play.google.com^$important
-||plog.vstlsrv.com^$important
-||plus.l.google.com^$important
-||pornhub.com^$third-party
-||prodregistryv2.org^$important
-||proll.esexa.online^$important
-||prvc.io^$important
-||pundr.esexa.online^$important
-||s.orbsrv.com^$important
-||sblona.com^$important
-||sdk.iad-01.braze.com^$important
-||sentry.io^$important
-||server.events.data.microsoft.com^$important
-||spo.nel.measure.office.net^$important
-||srtb.msn.com^$important
-||ssl.google-analytics.com^$important
-||star-mini.c10r.facebook.com^$important
-||star.c10r.facebook.com^$important
-||star.fallback.c10r.facebook.com^$important
-||static-cdn.strpst.com^$important
-||static.cloudflareinsights.com^$important
-||static.fd-api.com^$important
-||static.trafficjunky.com^$important
-||stats.hprofits.com^$important
-||storage.multstorage.com^$important
-||stun.l.google.com^$important
-||thegay.com^$third-party
-||thumb.live.mmcdn.com^$important
-||time1.google.com^$important
-||time2.google.com^$important
-||time3.google.com^$important
-||time4.google.com^$important
-||tpc.googlesyndication.com^$important
-||tr.xhamster.com^$third-party
-||tr.xhrecipes.xyz^$important
-||ublock.telemetry.eyeo.com^$important
-||unpkg.com^$important
-||upload.fp.measure.office.com^$important
-||upload2.fp.measure.office.com^$important
-||v2.fit^$important
-||variations.brave.com^$important
-||video-pr.xhcdn.com^$important
-||vjs.zencdn.net^$important
-||vk.com^$important
-||web.facebook.com^$important
-||wfuhkyardawh.com^$important
-||widget-proxy.xhamster.com^$important
-||www.facebook.com^$important
-||www.google.com^$important
-||www.googleadservices.com^$important
-||www.imglnkd.com^$important
-||www.kcadxjoxkggcui.com^$important
-||www.visariomedia.com^$important
-||www.yuntodifrz.com^$important
-||xaloxfnusha.com^$important
-||xh-mobile^$important
-||xh-shared^$important
-||xhamster.com^$important
-||xhamster.desi^$important
-||xhrecipes.xyz^$important
-||xhstorage.com^$important
-||z-p42-chat-e2ee-ig-fallback.facebook.com^$important
-||z-p42-chat-e2ee-ig.facebook.com^$important
+###pre-roll-ad
+##[class*="thumb-inner-wrapper video-preview-playing"]
+##.modal custom visible
+##.thumb-inner-wrapper video-preview-playing
+###credential_picker_iframe
+boyfriendtv.com##div.container:nth-child(4)
+xvideos.com###tabComments_bottom_page
+icegayporn.com##div.root-container:first-child > div.container.js-sticky-sidebar-container.container--with-sidebar:nth-child(5) > div.container__section:nth-child(3) > div.mt-15:last-child
+icegayporn.com##div.root-container:first-child > div.container.js-sticky-sidebar-container.container--with-sidebar:nth-child(5) > div.container__section:nth-child(3) > div.mobile-spots-wrap:nth-child(6)
+icegayporn.com###galleries > div.native-title.margin-10b.clearfix:nth-child(68)
+icegayporn.com##div.root-container:first-child > div.mobile-spots.header-spot.header-random:nth-child(4)
+icegayporn.com##footer:nth-child(2)
+icegayporn.com##div.root-container:first-child > div.container:nth-child(4) > div.b-videos.clearfix:last-child > div.mt-15:last-child
+icegayporn.com###related > div.native-title.margin-10b.clearfix:nth-child(18)
+icegayporn.com##div.root-container:first-child > div.container:nth-child(4) > div.b-videos.clearfix:last-child > div.mobile-spots-wrap:nth-child(5)
+icegayporn.com##div.root-container:first-child > div.container:nth-child(4) > div.relative:first-child > div.video-container__columns:last-child > div.video-container__random-column:last-child
+icegayporn.com##div.root-container:first-child > div.container:nth-child(4) > div.relative:first-child > div.video-container__columns:last-child > div.video-container__player-column:first-child > div.video-container__info.banners:last-child
+icegayporn.com##div.root-container:first-child > div.container:nth-child(4) > div.relative:first-child > div.video-container__columns:last-child > div.video-container__player-column:first-child > div.video-container__info.banners:nth-child(3)
+icegayporn.com##div.root-container:first-child > div.mobile-spots.header-spot.header-random:nth-child(3)
+mengem.com###BGm-Above-player > a
+mengem.com##div.container:first-child > div.footer-margin:last-child
+mengem.com##div.container:first-child > div.content:nth-child(4) > div.block-video:nth-child(2) > div.table:first-child
+mengem.com###kt_player > div.fp-player:last-child > div:last-child > iframe
+##[class*="mobile-random header-spot header-random"]
+##.ad-container
+##.adsbygoogle:empty
+##.ad-space
+##.native-ad
+##.popup-ad
+##.sidebar-ad
+##.sponsored-content
+##.video-ad-overlay
+##a[href*="/?utm_source="][target="_blank"]
+##article[class*="sponsored"]
+##aside[id*="advert"]
+##div[class*="ad-container"]
+##div[class*="ad-space"]:empty
+##div[class*="advertisement"]
+##div[class*="floating-ad"]
+bing.com##.b_ad
+facebook.com##div[data-pagelet="FeedUnit_{n}"] :has(span:contains(Sponsorlu))
+freepornvideos.xxx##[class*="right"]
+freepornvideos.xxx##[class*="sponsor top_player_sponsor"]
+freepornvideos.xxx##[class*="text"]
+google.com##.ads-ad
+lethimhit.com###adde_modal-modal
+lethimhit.com###adde_modal-overlay
+lethimhit.com###block-10
+lethimhit.com###block-12
+lethimhit.com###block-14
+lethimhit.com###block-23
+lethimhit.com###block-8
+lethimhit.com###block-8 > a > img.aligncenter.loaded
+lethimhit.com###colophon
+lethimhit.com###cookie-bar
+lethimhit.com###dclm_modal_content
+lethimhit.com###dclm_modal_screen
+lethimhit.com###sidebar > div.happy-sidebar:first-child
+lethimhit.com###wp_widget_wpchaturbatewidget-2
+lethimhit.com###wp_widget_wpchaturbatewidget-4
+pornhub.com##a.buttonClass.blackBtn.eudsaLink:nth-child(13)
+tr.xhamster.com###credential_picker_iframe
+tr.xhamster.com###sidebar-promo
+tr.xhamster.com##._0bcfdc65._9563dba9
+tr.xhamster.com##._1f466f5d._330d1d2e._40821f4f._16f8afe9
+tr.xhamster.com##.after-pager
+tr.xhamster.com##.cG-Dcno-ts-init.cG-Dc--bottom.cG-Dc
+tr.xhamster.com##.cG-Dcno-ts-init.cG-Dc--middle.cG-Dc
+tr.xhamster.com##.cG-Dcno-ts-init.cG-Dc--top.cG-Dc
+tr.xhamster.com##.cG-Dcpremium-n-overlay
+tr.xhamster.com##.cookiesAnnounce-30a9a.mobile-30a9a
+tr.xhamster.com##.exp76.cG-Dcpremium-n-overlay
+tr.xhamster.com##.exp76.fixed-height.mavyQ-dBpremium-n-overlay
+tr.xhamster.com##.exp76.fixed-height.QAIwt-tNFcpremium-n-overlay
+tr.xhamster.com##.exp76.mavyQ-dBpremium-n-overlay
+tr.xhamster.com##.exp76.page-2.QAIwt-tNFcpremium-n-overlay
+tr.xhamster.com##.exp76-small-thumb.exp76.page-2.mavyQ-dBpremium-n-overlay
+tr.xhamster.com##.false
+tr.xhamster.com##.fixed-height.xnE-MTmNpremium-n-overlay
+tr.xhamster.com##.mavyQ-dBno-ts-init.mavyQ-dB--bottom.mavyQ-dB
+tr.xhamster.com##.mavyQ-dBno-ts-init.mavyQ-dB--middle.mavyQ-dB
+tr.xhamster.com##.mavyQ-dBno-ts-init.mavyQ-dB--top.mavyQ-dB
+tr.xhamster.com##.promo-inside-video.top-video-block
+tr.xhamster.com##.QAIwt-tNFcno-ts-init.QAIwt-tNFc--bottom.QAIwt-tNFc
+tr.xhamster.com##.QAIwt-tNFcno-ts-init.QAIwt-tNFc--middle.QAIwt-tNFc
+tr.xhamster.com##.thumbsScrollable-b7566.insideVideoList-b7566.desktop-b7566.root-b7566
+tr.xhamster.com##.thumbsScrollable-b7566.insideVideoListUnordered-b7566.insideVideoList-b7566.root-b7566
+tr.xhamster.com##.top-banner
+tr.xhamster.com##.topPart-cb57f
+tr.xhamster.com##.video-page__layout-info
+tr.xhamster.com##.video-type-video > aside
+tr.xhamster.com##.xnE-MTmNno-ts-init.xnE-MTmN--bottom.xnE-MTmN
+tr.xhamster.com##.xnE-MTmNno-ts-init.xnE-MTmN--middle.xnE-MTmN
+tr.xhamster.com##.xnE-MTmNpremium-n-overlay
+tr.xhamster.com##aside:nth-of-type(2)
+tr.xhamster.com##div[id^="ad-block-"]
+tr.xhamster.com##li.page-3.thumb-list-mobile-item--type-video.thumb-list-mobile-item:nth-of-type(41)
+tr.xhamster.com##li.page-3.thumb-list-mobile-item--type-video.thumb-list-mobile-item:nth-of-type(42)
+tr.xhamster.com##li.page-3.thumb-list-mobile-item--type-video.thumb-list-mobile-item:nth-of-type(42) > .role-pop.mobile-video-thumb
+tr.xhamster.com,xhofficial.com,xhamster.com,xhamster2.com,xhamster.desi,xhamster18.desi,xhamster2.desi,xhamster19.com,xhofficial.desi,xhamster1.desi##[class$="-pause"],[class*="ads"],[class*="video-view-ads"],[class*="view-ads"],[class*="wio-"],[class*="wixx-"],[class*="yld-"],[class*="yxd-j"],[class^="xp-banner"],[class^="xplayer-banner"],a[href*="adblocked"][target="_blank"],[data-role^="yld-"],[class^="xplayer-ads"]
+tr.xhamster.com,xhofficial.com,xhamster.com,xhamster2.com,xhamster.desi,xhamster18.desi,xhamster2.desi,xhamster19.com,xhofficial.desi,xhamster1.desi##aside:nth-child(n+1)
+twitter.com##div[data-testid="placementTracking"] :has(span:contains(Promoted))
+manporn.xxx##div.layout:nth-child(3) > div.content.ways:nth-child(5) > div.mob-player-adv:first-child
+manporn.xxx###list_videos_related_videos_container > div.thumbset.video.block-related:first-child > div.block-related-AD:nth-child(16)
+manporn.xxx###list_videos_related_videos_container > div.thumbset.video.block-related:first-child > div.adv-wide:nth-child(7)
+pornhub.com##a.buttonClass.blackBtn.eudsaLink:nth-child(12)
+pornhub.com##div.bottomNav.clearfix:nth-child(11)
+boyfriendtv.com##div.modal.custom.visible:last-child
+boyfriendtv.com###rtaOverlay
+##[class*="no-popup col-xs-6 col-sm-4 col-md-3 content-item video-item-wrapper"{

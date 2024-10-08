@@ -5,8 +5,8 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
-example.com##.ad-space
-example.com##div[class*="ad-container"]
+##.ad-space
+##div[class*="ad-container"]
 ! Genel reklam alanları
 ##.ad-container
 ##div[class*="advertisement"]

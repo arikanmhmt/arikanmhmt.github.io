@@ -5,6 +5,11 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+youtube.com###clarify-box > ytd-clarification-renderer.style-scope.ytd-watch-flexy
+youtube.com###contents > ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer:nth-child(3)
+youtube.com###contents > ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer:nth-child(5)
+youtube.com###movie_player > div.html5-endscreen
+youtube.com###below > ytd-merch-shelf-renderer
 ||*.xhamsterlive.com^$dnsrewrite=0.0.0.0
 @@||ajax.googleapis.com/ajax/libs/webfont/$script,domain=bootsnipp.com|regexpal.com|typepad.com
 @@||amazonaws.com^$font,3p,domain=dollartree.com

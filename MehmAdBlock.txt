@@ -5,6 +5,7 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+||*.xhamsterlive.com*$dnsrewrite=0.0.0.0
 @@||ajax.googleapis.com/ajax/libs/webfont/$script,domain=bootsnipp.com|regexpal.com|typepad.com
 @@||amazonaws.com^$font,3p,domain=dollartree.com
 @@||googleapis.com/ajax/libs/webfont/$domain=typepad.com

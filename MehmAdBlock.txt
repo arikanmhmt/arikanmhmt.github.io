@@ -5,6 +5,45 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+example.com##.ad-space
+example.com##div[class*="ad-container"]
+! Genel reklam alanları
+##.ad-container
+##div[class*="advertisement"]
+##.sponsored-content
+
+! Video reklamları
+###pre-roll-ad
+##.video-ad-overlay
+
+! Kenar çubuğu reklamları
+##.sidebar-ad
+##aside[id*="advert"]
+
+! Pop-up ve floating reklamlar
+##.popup-ad
+##div[class*="floating-ad"]
+
+! Arama motoru sponsorlu içerikleri
+google.com##.ads-ad
+bing.com##.b_ad
+
+! Sosyal medya sponsorlu içerikleri
+facebook.com##div[data-pagelet="FeedUnit_{n}"] :has(span:contains(Sponsorlu))
+twitter.com##div[data-testid="placementTracking"] :has(span:contains(Promoted))
+
+! Haber sitelerindeki native reklamlar
+##.native-ad
+##article[class*="sponsored"]
+
+! Belirli bir site için özel kurallar (örnek: example.com)
+example.com##.top-banner
+example.com###sidebar-promo
+example.com##div[id^="ad-block-"]
+
+! Boş reklam alanlarını gizleme
+##div[class*="ad-space"]:empty
+##.adsbygoogle:empty
 youtube.com###clarify-box > ytd-clarification-renderer.style-scope.ytd-watch-flexy
 youtube.com###contents > ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer:nth-child(3)
 youtube.com###contents > ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer:nth-child(5)

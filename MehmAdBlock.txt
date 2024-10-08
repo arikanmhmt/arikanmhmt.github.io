@@ -5,6 +5,45 @@
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
+tr.xhamster.com##._1f466f5d._330d1d2e._40821f4f._16f8afe9
+tr.xhamster.com##.mavyQ-dBno-ts-init.mavyQ-dB--top.mavyQ-dB
+tr.xhamster.com##.exp76.fixed-height.mavyQ-dBpremium-n-overlay
+tr.xhamster.com##.mavyQ-dBno-ts-init.mavyQ-dB--middle.mavyQ-dB
+tr.xhamster.com##.thumbsScrollable-b7566.insideVideoListUnordered-b7566.insideVideoList-b7566.root-b7566
+tr.xhamster.com##.mavyQ-dBno-ts-init.mavyQ-dB--bottom.mavyQ-dB
+tr.xhamster.com##.after-pager
+tr.xhamster.com##.topPart-cb57f
+tr.xhamster.com##.false
+tr.xhamster.com##.video-page__layout-info
+tr.xhamster.com##.cookiesAnnounce-30a9a.mobile-30a9a
+tr.xhamster.com##.exp76-small-thumb.exp76.page-2.mavyQ-dBpremium-n-overlay
+tr.xhamster.com##li.page-3.thumb-list-mobile-item--type-video.thumb-list-mobile-item:nth-of-type(42) > .role-pop.mobile-video-thumb
+tr.xhamster.com##li.page-3.thumb-list-mobile-item--type-video.thumb-list-mobile-item:nth-of-type(42)
+tr.xhamster.com##li.page-3.thumb-list-mobile-item--type-video.thumb-list-mobile-item:nth-of-type(41)
+tr.xhamster.com##.exp76.mavyQ-dBpremium-n-overlay
+tr.xhamster.com##.cG-Dcno-ts-init.cG-Dc--top.cG-Dc
+tr.xhamster.com##.cookiesAnnounce-30a9a.mobile-30a9a
+tr.xhamster.com##.exp76.cG-Dcpremium-n-overlay
+tr.xhamster.com##.cG-Dcno-ts-init.cG-Dc--middle.cG-Dc
+tr.xhamster.com##.thumbsScrollable-b7566.insideVideoListUnordered-b7566.insideVideoList-b7566.root-b7566
+tr.xhamster.com##.promo-inside-video.top-video-block
+tr.xhamster.com##.cG-Dcno-ts-init.cG-Dc--bottom.cG-Dc
+tr.xhamster.com##.topPart-cb57f
+tr.xhamster.com##.after-pager
+tr.xhamster.com##.cG-Dcpremium-n-overlay
+tr.xhamster.com##._0bcfdc65._9563dba9
+tr.xhamster.com##.thumbsScrollable-b7566.insideVideoList-b7566.desktop-b7566.root-b7566
+tr.xhamster.com##aside:nth-of-type(2)
+tr.xhamster.com##.exp76.fixed-height.QAIwt-tNFcpremium-n-overlay
+tr.xhamster.com##.QAIwt-tNFcno-ts-init.QAIwt-tNFc--middle.QAIwt-tNFc
+tr.xhamster.com##.QAIwt-tNFcno-ts-init.QAIwt-tNFc--bottom.QAIwt-tNFc
+tr.xhamster.com##.video-type-video > aside
+tr.xhamster.com##.video-page__layout-info
+tr.xhamster.com##.exp76.page-2.QAIwt-tNFcpremium-n-overlay
+tr.xhamster.com##.fixed-height.xnE-MTmNpremium-n-overlay
+tr.xhamster.com##.xnE-MTmNno-ts-init.xnE-MTmN--middle.xnE-MTmN
+tr.xhamster.com##.xnE-MTmNno-ts-init.xnE-MTmN--bottom.xnE-MTmN
+tr.xhamster.com##.xnE-MTmNpremium-n-overlay
 @@||0i0i0i0.com^$important
 @@||515013314.collect.igodigital.com^$important
 @@||c.vkcache.net^$important

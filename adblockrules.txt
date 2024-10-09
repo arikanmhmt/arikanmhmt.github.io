@@ -1,11 +1,10 @@
 [Adblock Plus 2.0]
 ! Version:
-! Title: AdBlock Cosmetic Rules
+! Title: M
 ! Last modified:
 ! Expires: 4 days (update frequency)
 ! Homepage:
 !
-A
 ###\31 280_adv
 ###\31 x1_container.float-banner-footer
 ###__ads_dp

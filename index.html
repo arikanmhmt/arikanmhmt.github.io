@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorilerim</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --hover-color: #1d4ed8;
+            --background-color: #f3f4f6;
+            --card-background: #ffffff;
+            --text-color: #1a1a1a;
+            --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 1.875rem;
+            color: var(--primary-color);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: white;
+            background-color: var(--primary-color);
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: var(--hover-color);
+        }
+
+        .links-container {
+            width: 100%;
+            background: var(--card-background);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            background-color: #f9fafb;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: background-color 0.2s;
+        }
+
+        .link-item:hover {
+            background-color: #e5e7eb;
+        }
+
+        .link-item button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+        }
+
+        .button-group-modal {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Favorilerim</h1>
+        <div class="button-group">
+            <button class="button" onclick="openModal()">Yeni Ekle</button>
+            <button class="button" onclick="backupLinks()">Yedekle</button>
+            <button class="button" onclick="restoreLinks()">Yükle</button>
+        </div>
+    </div>
+
+    <div class="links-container" id="general-links"></div>
+
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <form onsubmit="addNewLink(event)">
+                <div class="form-group">
+                    <label for="linkName">Bağlantı Adı</label>
+                    <input type="text" id="linkName" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkUrl">Bağlantı URL</label>
+                    <input type="url" id="linkUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkCategory">Kategori</label>
+                    <select id="linkCategory" required>
+                        <option value="general">Genel</option>
+                        <option value="adult">Yetişkin</option>
+                    </select>
+                </div>
+                <div class="button-group-modal">
+                    <button type="button" onclick="closeModal()">İptal</button>
+                    <button type="submit" class="button">Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const defaultLinks = {
+            general: [
+                { name: "🌐 Zyxel Modem", url: "http://192.168.1.1" },
+                { name: "🛡️ NextDNS", url: "https://my.nextdns.io/b1735a/logs" }
+            ]
+        };
+
+        window.onload = function() {
+            const savedLinks = localStorage.getItem('favoriteLinks');
+            const links = savedLinks ? JSON.parse(savedLinks) : defaultLinks;
+            renderLinks(links);
+        };
+
+        function renderLinks(links) {
+            document.getElementById('general-links').innerHTML = links.general.map(createLinkHTML).join('');
+        }
+
+        function createLinkHTML(link) {
+            return `<div class="link-item">
+                        <a href="${link.url}" target="_blank">${link.name}</a>
+                        <button onclick="deleteLink('${link.name}')">❌</button>
+                    </div>`;
+        }
+
+        function openModal() {
+            document.getElementById('addModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('addModal').classList.remove('active');
+        }
+
+        function addNewLink(event) {
+            event.preventDefault();
+            const name = document.getElementById('linkName').value;
+            const url = document.getElementById('linkUrl').value;
+            const category = document.getElementById('linkCategory').value;
+
+            const savedLinks = JSON.parse(localStorage.getItem('favoriteLinks')) || defaultLinks;
+            savedLinks[category].push({ name, url });
+            localStorage.setItem('favoriteLinks', JSON.stringify(savedLinks));
+            renderLinks(savedLinks);
+            closeModal();
+        }
+
+        function deleteLink(name) {
+            const savedLinks = JSON.parse(localStorage.getItem('favoriteLinks'));
+            savedLinks.general = savedLinks.general.filter(link => link.name !== name);
+            localStorage.setItem('favoriteLinks', JSON.stringify(savedLinks));
+            renderLinks(savedLinks);
+        }
+
+        function backupLinks() {
+            const links = localStorage.getItem('favoriteLinks');
+            const blob = new Blob([links], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'backup.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function restoreLinks() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = e => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        const links = JSON.parse(event.target.result);
+                        localStorage.setItem('favoriteLinks', JSON.stringify(links));
+                        renderLinks(links);
+                    };
+                    reader.readAsText(file);
+                }
+            };
+            input.click();
+        }
+    </script>
+</body>
+</html>

@@ -298,12 +298,13 @@
 </head>
 <body>
     <div class="user-info">
-        <div class="user-avatar">AR</div>
+        <button class="menu-button" onclick="toggleMenu()">arikanmhmt &#9662;</button>
         <div class="user-details">
-            <div class="user-name">arikanmhmt</div>
             <div class="user-time" id="currentDateTime">UTC: 2024-11-16 09:30:51</div>
         </div>
     </div>
+
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search rules...">
 
     <div class="dashboard">
         <div class="stat-card">
@@ -354,6 +355,28 @@
     <div class="card">
         <h2>Current Rules</h2>
         <div id="rules"></div>
+    </div>
+    
+    <div class="card">
+        <h2>Current Rules</h2>
+        <div id="rules"></div>
+    </div>
+
+    <div class="fab" onclick="showAddRuleModal()">+</div>
+
+    <div id="addRuleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddRuleModal()">&times;</span>
+            <h2>Add New Rule</h2>
+            <textarea id="ruleInput" placeholder="Enter domain or Adblock Plus rule here..."></textarea>
+            <div id="duplicateWarning" class="duplicate-warning">
+                This rule already exists!
+            </div>
+            <div class="button-group">
+                <button onclick="addRule()">Add Rule</button>
+                <button onclick="validateRule()">Validate Rule</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -486,14 +509,53 @@
             }
             
             updateDashboard();
+function toggleMenu() {
+            // Menu toggle işlevselliği burada uygulanacak
+            alert('Menu functionality to be implemented');
         }
 
-        // Initialize
-        loadRules();
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-        setInterval(updateSessionDuration, 60000);
-        updateSessionDuration();
+        function showAddRuleModal() {
+            document.getElementById('addRuleModal').style.display = 'block';
+        }
+
+        function closeAddRuleModal() {
+            document.getElementById('addRuleModal').style.display = 'none';
+        }
+
+        function updateRuleDisplay() {
+            const rulesDiv = document.getElementById('rules');
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            
+            if (rules.length === 0) {
+                rulesDiv.innerHTML = '<p style="text-align: center; opacity: 0.6;">No rules added yet</p>';
+                return;
+            }
+            
+            const filteredRules = rules.filter(rule => rule.toLowerCase().includes(searchQuery));
+            
+            rulesDiv.innerHTML = filteredRules.map((rule, index) => `
+                <div class="rule-item">
+                    <div class="rule-text">${rule}</div>
+                    <button class="danger" onclick="deleteRule(${rules.indexOf(rule)})">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        // Arama işlevselliği için event listener
+        document.getElementById('searchBar').addEventListener('input', updateRuleDisplay);
+
+        // Initialize fonksiyonunu güncelleyin
+        function initialize() {
+            loadRules();
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+            setInterval(updateSessionDuration, 60000);
+            updateSessionDuration();
+            updateRuleDisplay(); // Başlangıçta kuralları göster
+        }
+
+        // Sayfa yüklendiğinde initialize fonksiyonunu çağırın
+        window.onload = initialize;
     </script>
-</body>
-</html>
+    </body>
+    </html>

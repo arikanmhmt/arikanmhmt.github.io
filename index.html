@@ -293,6 +293,28 @@
             text-decoration: none;
             cursor: pointer;
         }
+.rule-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: var(--background);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            word-break: break-all; /* Uzun domainleri kır */
+        }
+
+        @media (max-width: 768px) {
+            .rule-item {
+                flex-direction: column; /* Mobil cihazlarda alt alta sırala */
+                align-items: flex-start; /* Elemanları sola hizala */
+            }
+
+            .rule-item button {
+                margin-top: 8px; /* Sil butonuna boşluk ekle */
+                width: 100%; /* Butonu tam genişlikte yap */
+            }
         }
     </style>
 </head>

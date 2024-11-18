@@ -297,10 +297,22 @@
     </style>
 </head>
 <body>
+    <div id="importExportMenu" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImportExportMenu()">&times;</span>
+            <h2>Import/Export Rules</h2>
+            <textarea id="bulkRules" placeholder="Paste multiple rules here..."></textarea>
+            <div class="button-group">
+                <button onclick="importRules()">Import Rules</button>
+                <button onclick="exportRules()">Export Rules</button>
+            </div>
+        </div>
+    </div>
+
     <div class="user-info">
-        <button class="menu-button" onclick="toggleMenu()">arikanmhmt &#9662;</button>
+        <button class="menu-button" onclick="showImportExportMenu()">arikanmhmt &#9662;</button>
         <div class="user-details">
-            <div class="user-time" id="currentDateTime">UTC: 2024-11-16 09:30:51</div>
+            <div class="user-time" id="currentDateTime"></div>
         </div>
     </div>
 
@@ -311,9 +323,6 @@
             <div class="stat-title">Total Rules</div>
             <div class="stat-value" id="totalRules">0</div>
             <div class="stat-trend" id="rulesTrend">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                    <path d="M6 0l6 6H0z"/>
-                </svg>
                 <span>0% this session</span>
             </div>
         </div>
@@ -332,32 +341,6 @@
     </div>
 
     <div class="card">
-        <h2>Add New Rule</h2>
-        <textarea id="ruleInput" placeholder="Enter Adblock Plus rule here..."></textarea>
-        <div id="duplicateWarning" class="duplicate-warning">
-            This rule already exists!
-        </div>
-        <div class="button-group">
-            <button onclick="addRule()">Add Rule</button>
-            <button onclick="validateRule()">Validate Rule</button>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Import/Export Rules</h2>
-        <textarea id="bulkRules" placeholder="Paste multiple rules here..."></textarea>
-        <div class="button-group">
-            <button onclick="importRules()">Import Rules</button>
-            <button onclick="exportRules()">Export Rules</button>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Current Rules</h2>
-        <div id="rules"></div>
-    </div>
-    
-    <div class="card">
         <h2>Current Rules</h2>
         <div id="rules"></div>
     </div>
@@ -369,9 +352,7 @@
             <span class="close" onclick="closeAddRuleModal()">&times;</span>
             <h2>Add New Rule</h2>
             <textarea id="ruleInput" placeholder="Enter domain or Adblock Plus rule here..."></textarea>
-            <div id="duplicateWarning" class="duplicate-warning">
-                This rule already exists!
-            </div>
+            <div id="duplicateWarning" class="duplicate-warning">This rule already exists!</div>
             <div class="button-group">
                 <button onclick="addRule()">Add Rule</button>
                 <button onclick="validateRule()">Validate Rule</button>
@@ -406,9 +387,6 @@
                 ? ((rules.length - initialRuleCount) / initialRuleCount * 100).toFixed(1)
                 : 0;
             document.getElementById('rulesTrend').innerHTML = `
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                    <path d="M6 0l6 6H0z"/>
-                </svg>
                 <span>${trend}% this session</span>
             `;
         }
@@ -438,6 +416,7 @@
                 }
                 updateDashboard();
             }
+            closeAddRuleModal();
         }
 
         function validateRule() {
@@ -463,6 +442,7 @@
             document.getElementById('bulkRules').value = '';
             updateDashboard();
             saveRules();
+            closeImportExportMenu();
         }
 
         function exportRules() {
@@ -478,14 +458,19 @@
 
         function updateRuleDisplay() {
             const rulesDiv = document.getElementById('rules');
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            
             if (rules.length === 0) {
                 rulesDiv.innerHTML = '<p style="text-align: center; opacity: 0.6;">No rules added yet</p>';
                 return;
             }
-            rulesDiv.innerHTML = rules.map((rule, index) => `
+            
+            const filteredRules = rules.filter(rule => rule.toLowerCase().includes(searchQuery));
+            
+            rulesDiv.innerHTML = filteredRules.map((rule, index) => `
                 <div class="rule-item">
                     <div class="rule-text">${rule}</div>
-                    <button class="danger" onclick="deleteRule(${index})">Delete</button>
+                    <button class="danger" onclick="deleteRule(${rules.indexOf(rule)})">Delete</button>
                 </div>
             `).join('');
         }
@@ -509,9 +494,6 @@
             }
             
             updateDashboard();
-function toggleMenu() {
-            // Menu toggle işlevselliği burada uygulanacak
-            alert('Menu functionality to be implemented');
         }
 
         function showAddRuleModal() {
@@ -522,40 +504,28 @@ function toggleMenu() {
             document.getElementById('addRuleModal').style.display = 'none';
         }
 
-        function updateRuleDisplay() {
-            const rulesDiv = document.getElementById('rules');
-            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
-            
-            if (rules.length === 0) {
-                rulesDiv.innerHTML = '<p style="text-align: center; opacity: 0.6;">No rules added yet</p>';
-                return;
-            }
-            
-            const filteredRules = rules.filter(rule => rule.toLowerCase().includes(searchQuery));
-            
-            rulesDiv.innerHTML = filteredRules.map((rule, index) => `
-                <div class="rule-item">
-                    <div class="rule-text">${rule}</div>
-                    <button class="danger" onclick="deleteRule(${rules.indexOf(rule)})">Delete</button>
-                </div>
-            `).join('');
+        function showImportExportMenu() {
+            document.getElementById('importExportMenu').style.display = 'block';
         }
 
-        // Arama işlevselliği için event listener
-        document.getElementById('searchBar').addEventListener('input', updateRuleDisplay);
+        function closeImportExportMenu() {
+            document.getElementById('importExportMenu').style.display = 'none';
+        }
 
-        // Initialize fonksiyonunu güncelleyin
+        // Initialize
         function initialize() {
             loadRules();
             updateDateTime();
             setInterval(updateDateTime, 1000);
             setInterval(updateSessionDuration, 60000);
             updateSessionDuration();
-            updateRuleDisplay(); // Başlangıçta kuralları göster
+            updateRuleDisplay();
         }
 
-        // Sayfa yüklendiğinde initialize fonksiyonunu çağırın
+        // Arama işlevselliği için event listener
+        document.getElementById('searchBar').addEventListener('input', updateRuleDisplay);
+
+        // Sayfa yüklendiğinde initialize fonksiyonunu çağır
         window.onload = initialize;
     </script>
-    </body>
-    </html>
+</body>

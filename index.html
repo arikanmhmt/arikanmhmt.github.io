@@ -57,79 +57,6 @@
             }
         }
 
-        .dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 24px;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 20px;
-            background-color: var(--surface);
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .user-details {
-            flex: 1;
-        }
-
-        .user-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .user-time {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .stat-card {
-            background-color: var(--surface);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .stat-title {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 8px;
-        }
-
-        .stat-value {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .stat-trend {
-            font-size: 0.9rem;
-            color: var(--success);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
         .card {
             background-color: var(--surface);
             border-radius: 12px;
@@ -138,7 +65,7 @@
             border: 1px solid var(--border);
         }
 
-        h1, h2 {
+        h2 {
             font-weight: 600;
             margin-bottom: 1rem;
         }
@@ -154,13 +81,6 @@
             font-family: 'Monaco', 'Consolas', monospace;
             margin: 8px 0;
             resize: vertical;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin: 16px 0;
         }
 
         button {
@@ -179,375 +99,56 @@
             transform: translateY(-1px);
         }
 
-        button.danger {
-            background-color: var(--danger);
-        }
-
         .rule-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px;
-            margin: 8px 0;
-            background-color: var(--background);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-
-        .rule-text {
-            flex: 1;
-            margin-right: 12px;
-            word-break: break-all;
-        }
-
-        .duplicate-warning {
-            color: var(--warning);
             padding: 8px;
-            margin-top: 8px;
-            display: none;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-            .button-group {
-                flex-direction: column;
-            }
-            
-            button {
-                width: 100%;
-            }
-.search-bar {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background-color: var(--background);
-            color: var(--text);
-        }
-
-        .fab {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background-color: var(--primary);
-            color: white;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .fab:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .menu-button {
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 16px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-
-        .modal-content {
-            background-color: var(--surface);
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid var(--border);
-            width: 80%;
-            max-width: 500px;
-            border-radius: 12px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: var(--text);
-            text-decoration: none;
-            cursor: pointer;
-        }
-.rule-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px;
-            margin: 8px 0;
-            background-color: var(--background);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            word-break: break-all; /* Uzun domainleri kır */
-        }
-
-        @media (max-width: 768px) {
-            .rule-item {
-                flex-direction: column; /* Mobil cihazlarda alt alta sırala */
-                align-items: flex-start; /* Elemanları sola hizala */
-            }
-
-            .rule-item button {
-                margin-top: 8px; /* Sil butonuna boşluk ekle */
-                width: 100%; /* Butonu tam genişlikte yap */
-            }
+            border-bottom: 1px solid var(--border);
+            word-break: break-word;
         }
     </style>
 </head>
 <body>
-    <div id="importExportMenu" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeImportExportMenu()">&times;</span>
-            <h2>Import/Export Rules</h2>
-            <textarea id="bulkRules" placeholder="Paste multiple rules here..."></textarea>
-            <div class="button-group">
-                <button onclick="importRules()">Import Rules</button>
-                <button onclick="exportRules()">Export Rules</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="user-info">
-        <button class="menu-button" onclick="showImportExportMenu()">arikanmhmt &#9662;</button>
-        <div class="user-details">
-            <div class="user-time" id="currentDateTime"></div>
-        </div>
-    </div>
-
-    <input type="text" id="searchBar" class="search-bar" placeholder="Search rules...">
-
-    <div class="dashboard">
-        <div class="stat-card">
-            <div class="stat-title">Total Rules</div>
-            <div class="stat-value" id="totalRules">0</div>
-            <div class="stat-trend" id="rulesTrend">
-                <span>0% this session</span>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <div class="stat-title">Session Duration</div>
-            <div class="stat-value" id="sessionDuration">0m</div>
-            <div class="stat-trend">Active</div>
-        </div>
-
-        <div class="stat-card">
-            <div class="stat-title">Duplicate Attempts</div>
-            <div class="stat-value" id="duplicateCount">0</div>
-            <div class="stat-trend" style="color: var(--warning)">Prevented</div>
-        </div>
-    </div>
-
     <div class="card">
         <h2>Current Rules</h2>
         <div id="rules"></div>
     </div>
-
-    <div class="fab" onclick="showAddRuleModal()">+</div>
-
-    <div id="addRuleModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAddRuleModal()">&times;</span>
-            <h2>Add New Rule</h2>
-            <textarea id="ruleInput" placeholder="Enter domain or Adblock Plus rule here..."></textarea>
-            <div id="duplicateWarning" class="duplicate-warning">This rule already exists!</div>
-            <div class="button-group">
-                <button onclick="addRule()">Add Rule</button>
-                <button onclick="validateRule()">Validate Rule</button>
-            </div>
-        </div>
-    </div>
+    <textarea id="bulkRules" placeholder="Exported rules will appear here..."></textarea>
+    <button onclick="exportRules()">Export Rules</button>
 
     <script>
         let rules = [];
-        let duplicateCount = 0;
-        const startTime = new Date();
-        const initialRuleCount = 0;
-
-        function updateDateTime() {
-            const now = new Date();
-            document.getElementById('currentDateTime').textContent = 
-                `UTC: ${now.toISOString().replace('T', ' ').slice(0, 19)}`;
-        }
-
-        function updateSessionDuration() {
-            const now = new Date();
-            const diff = Math.floor((now - startTime) / 1000 / 60);
-            document.getElementById('sessionDuration').textContent = 
-                diff < 60 ? `${diff}m` : `${Math.floor(diff / 60)}h ${diff % 60}m`;
-        }
-
-        function updateDashboard() {
-            document.getElementById('totalRules').textContent = rules.length;
-            document.getElementById('duplicateCount').textContent = duplicateCount;
-            
-            const trend = initialRuleCount > 0 
-                ? ((rules.length - initialRuleCount) / initialRuleCount * 100).toFixed(1)
-                : 0;
-            document.getElementById('rulesTrend').innerHTML = `
-                <span>${trend}% this session</span>
-            `;
-        }
-
-        function isDuplicate(rule) {
-            return rules.includes(rule);
-        }
-
-        function addRule() {
-            const ruleInput = document.getElementById('ruleInput');
-            const rule = ruleInput.value.trim();
-            const duplicateWarning = document.getElementById('duplicateWarning');
-            
-            if (rule) {
-                if (isDuplicate(rule)) {
-                    duplicateCount++;
-                    duplicateWarning.style.display = 'block';
-                    setTimeout(() => {
-                        duplicateWarning.style.display = 'none';
-                    }, 3000);
-                } else {
-                    rules.push(rule);
-                    ruleInput.value = '';
-                    duplicateWarning.style.display = 'none';
-                    updateRuleDisplay();
-                    saveRules();
-                }
-                updateDashboard();
-            }
-            closeAddRuleModal();
-        }
-
-        function validateRule() {
-            const rule = document.getElementById('ruleInput').value.trim();
-            if (rule.startsWith('||') || rule.startsWith('##') || rule.includes('##')) {
-                alert('✅ Rule format appears valid');
-            } else {
-                alert('❌ Invalid rule format');
-            }
-        }
-
-        function importRules() {
-            const bulkRules = document.getElementById('bulkRules').value;
-            const newRules = bulkRules.split('\n')
-                .map(rule => rule.trim())
-                .filter(rule => rule && !isDuplicate(rule));
-            
-            duplicateCount += bulkRules.split('\n')
-                .filter(rule => rule.trim() && isDuplicate(rule.trim())).length;
-            
-            rules = rules.concat(newRules);
-            updateRuleDisplay();
-            document.getElementById('bulkRules').value = '';
-            updateDashboard();
-            saveRules();
-            closeImportExportMenu();
-        }
-
-        function exportRules() {
-            document.getElementById('bulkRules').value = rules.join('\n');
-        }
-
-        function deleteRule(index) {
-            rules.splice(index, 1);
-            updateRuleDisplay();
-            updateDashboard();
-            saveRules();
-        }
 
         function updateRuleDisplay() {
+            // Extract domain-only rules and sort them
+            const domainRules = Array.from(new Set(
+                rules
+                    .filter(rule => rule.startsWith('||') && rule.includes('/'))
+                    .map(rule => rule.split('/')[0].replace('||', ''))
+            )).sort();
+
+            // Update the display
             const rulesDiv = document.getElementById('rules');
-            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
-            
-            if (rules.length === 0) {
-                rulesDiv.innerHTML = '<p style="text-align: center; opacity: 0.6;">No rules added yet</p>';
-                return;
-            }
-            
-            const filteredRules = rules.filter(rule => rule.toLowerCase().includes(searchQuery));
-            
-            rulesDiv.innerHTML = filteredRules.map((rule, index) => `
-                <div class="rule-item">
-                    <div class="rule-text">${rule}</div>
-                    <button class="danger" onclick="deleteRule(${rules.indexOf(rule)})">Delete</button>
-                </div>
+            rulesDiv.innerHTML = domainRules.map(domain => `
+                <div class="rule-item">${domain}</div>
             `).join('');
         }
 
-        function saveRules() {
-            localStorage.setItem('adblockRules', JSON.stringify(rules));
-            localStorage.setItem('duplicateCount', duplicateCount.toString());
+        function exportRules() {
+            // Export full rules in original order
+            document.getElementById('bulkRules').value = rules.join('\n');
         }
 
-        function loadRules() {
-            const savedRules = localStorage.getItem('adblockRules');
-            const savedDuplicateCount = localStorage.getItem('duplicateCount');
-            
-            if (savedRules) {
-                rules = JSON.parse(savedRules);
-                updateRuleDisplay();
-            }
-            
-            if (savedDuplicateCount) {
-                duplicateCount = parseInt(savedDuplicateCount);
-            }
-            
-            updateDashboard();
-        }
+        // Example initialization
+        rules = [
+            "||example.com/script.js",
+            "||anotherexample.com/path",
+            "||example.com/another",
+            "||yetanotherexample.com",
+            "##.ad-banner",
+            "||duplicate.com/path",
+            "||duplicate.com/path"
+        ];
 
-        function showAddRuleModal() {
-            document.getElementById('addRuleModal').style.display = 'block';
-        }
-
-        function closeAddRuleModal() {
-            document.getElementById('addRuleModal').style.display = 'none';
-        }
-
-        function showImportExportMenu() {
-            document.getElementById('importExportMenu').style.display = 'block';
-        }
-
-        function closeImportExportMenu() {
-            document.getElementById('importExportMenu').style.display = 'none';
-        }
-
-        // Initialize
-        function initialize() {
-            loadRules();
-            updateDateTime();
-            setInterval(updateDateTime, 1000);
-            setInterval(updateSessionDuration, 60000);
-            updateSessionDuration();
-            updateRuleDisplay();
-        }
-
-        // Arama işlevselliği için event listener
-        document.getElementById('searchBar').addEventListener('input', updateRuleDisplay);
-
-        // Sayfa yüklendiğinde initialize fonksiyonunu çağır
-        window.onload = initialize;
+        updateRuleDisplay();
     </script>
 </body>
+</html>
